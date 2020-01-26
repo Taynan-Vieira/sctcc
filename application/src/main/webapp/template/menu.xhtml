@@ -1,0 +1,49 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:pu="http://primefaces.org/ultima">
+
+    <h:form id="menuform">
+        <div class="layout-menu #{guestPreferences.menuClass}">
+            <div class="nano">
+                <div class="nano-content menu-scroll-content">
+                    <ui:fragment
+                            rendered="#{guestPreferences.profileMode == 'inline' and guestPreferences.menuLayout != 'menu-layout-static menu-layout-horizontal'}">
+                        <div class="profile">
+                            <div class="profile-image"></div>
+                            <a id="profile-options" href="#">
+                                <span class="profile-name">#{profileMenuBean.nomeUsuario}</span>
+                                <i class="material-icons">&#xE313;</i>
+                            </a>
+                        </div>
+                        <ul id="profile-menu" class="ultima-menu">
+                            <li role="menuitem">
+                                <a href="/sctcc/logout" class="ripplelink">
+                                    <i class="material-icons">power_settings_new</i>
+                                    <span>Sair</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </ui:fragment>
+
+                    <pu:menu widgetVar="me">
+                        <p:menuitem id="um_dashboard" value="Início" icon="home"
+                                    action="#{sessionBean.navigateToDashboard}" ajax="false"/>
+
+                        <p:submenu id="tcc" label="TCCS" icon="bookmark">
+                            <p:menuitem id="visualizarTcc" value="Visualizar TCCS" icon="book"
+                                        action="#{sessionBean.navigateToVisualizarTccs}"
+                                        ajax="false"/>
+                            <p:menuitem id="cadastrarTcc" value="Cadastrars TCC" icon="add"
+                                        action="#{sessionBean.navigateToDashboard}"
+                                        ajax="false"/>
+                        </p:submenu>
+
+                    </pu:menu>
+                </div>
+            </div>
+        </div>
+    </h:form>
+</ui:composition>
