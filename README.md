@@ -12,3 +12,9 @@ Tecnologias:
     * PostgreSQL 12
 
 "# sctcc" 
+
+Links:
+-------------
+```
+DER: encurtador.com.br/qHW16
+'''
