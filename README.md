@@ -17,4 +17,3 @@ Links:
 -------------
 ```
 DER: encurtador.com.br/qHW16
-'''
