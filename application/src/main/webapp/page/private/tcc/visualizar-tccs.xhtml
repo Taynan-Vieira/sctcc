@@ -17,8 +17,13 @@
             <div class="ui-g-12">
                 <div class="card card-w-title">
                     <h1>Visualizar TCCS</h1>
-                    <p:dataTable var="car" value="#{dtSelectionView.cars7}" selectionMode="single" reflow="true"
-                                 selection="#{dtSelectionView.selectedCar}" rowKey="#{car.id}" paginator="true" paginatorPosition="bottom" rows="10">
+                    <p:panelGrid id="pngTccs" columns="6"
+                                 columnClasses="ui-grid-col-12" layout="grid"
+                                 styleClass="ui-panelgrid-blank form-group"
+                                 style="border:0px none; background-color:transparent;">
+                    <p:dataTable var="car" value="#{dtSelectionView.cars7}" selectionMode="single"
+                                 selection="#{dtSelectionView.selectedCar}" rowKey="#{car.id}"
+                                 paginator="true" paginatorPosition="bottom" rows="10">
                         <f:facet name="header">
                             Trabalhos de conclusão de curso
                         </f:facet>
@@ -35,6 +40,7 @@
                         </p:column>
 
                     </p:dataTable>
+                    </p:panelGrid>
                 </div>
             </div>
 
