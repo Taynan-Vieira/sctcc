@@ -21,25 +21,52 @@
                                  columnClasses="ui-grid-col-12" layout="grid"
                                  styleClass="ui-panelgrid-blank form-group"
                                  style="border:0px none; background-color:transparent;">
-                    <p:dataTable var="car" value="#{dtSelectionView.cars7}" selectionMode="single"
-                                 selection="#{dtSelectionView.selectedCar}" rowKey="#{car.id}"
-                                 paginator="true" paginatorPosition="bottom" rows="10">
-                        <f:facet name="header">
-                            Trabalhos de conclusão de curso
-                        </f:facet>
-                        <p:column headerText="Matrícula" sortBy="#{car.id}">
-                            <h:outputText value="#{car.id}" />
-                        </p:column>
+                        <p:dataTable id="dtListaMateriaisCadastrados"
+                                     var="tcc"
+                                     emptyMessage="Sem TCCs."
+                                     paginator="true"
+                                     rows="10" paginatorPosition="bottom"
+                                     style="text-align: center;width: 100%;">
 
-                        <p:column headerText="Aluno" sortBy="#{car.year}">
-                            <h:outputText value="#{car.year}" />
-                        </p:column>
+                            <p:column headerText="Nome do Aluno">
+                                <h:outputText/>
+                            </p:column>
 
-                        <p:column headerText="Professor" sortBy="#{car.brand}">
-                            <h:outputText value="#{car.brand}" />
-                        </p:column>
+                            <p:column headerText="Tema">
+                                <h:outputText/>
+                            </p:column>
 
-                    </p:dataTable>
+                            <p:column headerText="Orientador">
+                                <h:outputText/>
+                            </p:column>
+
+                            <p:column headerText="Status">
+                                <h:outputText/>
+                            </p:column>
+
+                            <p:column headerText="Opções">
+                                <p:column>
+                                    <p:commandButton id="btnAvaliar"
+                                                     title="Avaliar" icon="ui-icon-pencil">
+                                    </p:commandButton>
+
+                                    <p:commandButton id="btnFecharBanca"
+                                                     title="Fechar banca" icon="ui-icon-trash"
+                                                     update="dtListaMateriaisCadastrados messages">
+                                        <p:confirm header="Deseja excluir este material?"/>
+                                    </p:commandButton>
+                                    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                                        <p:commandButton id="btnDialogSim" value="Sim" type="button"
+                                                         styleClass="ui-confirmdialog-yes"
+                                                         icon="ui icon-check"/>
+                                        <p:commandButton id="btnDialogNao" value="Não" type="button"
+                                                         styleClass="ui-confirmdialog-no"
+                                                         icon="ui icon-close"/>
+                                    </p:confirmDialog>
+                                </p:column>
+                            </p:column>
+
+                        </p:dataTable>
                     </p:panelGrid>
                 </div>
             </div>
