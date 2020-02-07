@@ -16,4 +16,4 @@ Tecnologias:
 Links:
 -------------
 ```
-DER: encurtador.com.br/qHW16
+DER: https://www.lucidchart.com/documents/view/5c553afa-75b9-4e89-87bc-652a44efd0d2/0_0
