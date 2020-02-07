@@ -2,6 +2,7 @@ create table if not exists public.tcc06_avaliacao
 (
     tcc06_cod_avaliacao bigint not null,
     tcc06_nota_final double precision,
+    tcc06_banca_aberta boolean,
     fktcc06tcc03_cod_trabalho bigint,
     fktcc06tcc09_cod_tipo_avaliacao bigint,
 

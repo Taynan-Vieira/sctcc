@@ -24,6 +24,7 @@
 
     <modules>
         <module>application</module>
+        <module>avaliacao</module>
     </modules>
 
     <dependencies>
