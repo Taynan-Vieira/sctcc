@@ -14,6 +14,7 @@ public class RewriteProvider extends HttpConfigurationProvider {
 
     public static final String DASHBOARD = "/";
     public static final String VISUALIZAR_TCCS = "/visualizarTccs";
+    public static final String AVALIAR_TCC = "/avaliarTcc";
     public static final String ERROR = "/error500";
     public static final String ERROR_404 = "/error404";
     public static final String ACESSO_NEGADO = "/acessoNegado";
@@ -25,6 +26,7 @@ public class RewriteProvider extends HttpConfigurationProvider {
                 .addRule(Join.path(DASHBOARD).to("/page/public/dashboard.xhtml"))
                 //TCC
                 .addRule(Join.path(VISUALIZAR_TCCS).to("/page/private/tcc/visualizar-tccs.xhtml"))
+                .addRule(Join.path(AVALIAR_TCC).to("/page/private/tcc/avaliar-tcc.xhtml"))
 
                 //ACESSO NEGADO
                 .addRule(Join.path(ACESSO_NEGADO).to("/page/public/acesso-negado.xhtml"))

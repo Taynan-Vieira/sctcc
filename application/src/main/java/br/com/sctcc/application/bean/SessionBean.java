@@ -21,6 +21,10 @@ public class SessionBean implements Serializable {
         return Navigate.to(RewriteProvider.VISUALIZAR_TCCS);
     }
 
+    public Navigate navigateToAvaliarTcc() {
+        return Navigate.to(RewriteProvider.AVALIAR_TCC);
+    }
+
     public Navigate navigateToError() {
         return Navigate.to(RewriteProvider.ERROR);
     }

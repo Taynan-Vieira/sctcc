@@ -5,7 +5,7 @@
                 xmlns:p="http://primefaces.org/ui"
                 template="/template/template.xhtml">
 
-    <ui:define name="title">Novo Produto</ui:define>
+    <ui:define name="title">Visualizar TCCs</ui:define>
 
     <ui:define name="head">
 
@@ -36,26 +36,42 @@
                                 <h:outputText value="#{tcc.tema}"/>
                             </p:column>
 
-                            <p:column headerText="Status">
+                            <p:column headerText="Status da avaliação">
                                 <h:outputText value="#{tcc.status}"/>
                             </p:column>
 
                             <p:column headerText="Opções">
                                 <p:column>
                                     <p:commandButton id="btnAvaliar"
-                                                     title="Avaliar" icon="ui-icon-pencil">
+                                                     title="Avaliar TCC" icon="ui-icon-gavel">
                                     </p:commandButton>
 
                                     <p:commandButton id="btnFecharBanca"
-                                                     title="Fechar banca" icon="ui-icon-trash"
+                                                     title="Fechar banca" icon="ui-icon-close"
                                                      update="dtListaTccs messages">
-                                        <p:confirm header="Deseja excluir este material?"/>
+                                        <p:confirm header="Deseja fechar a banca para este TCC?"/>
                                     </p:commandButton>
+
                                     <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
-                                        <p:commandButton id="btnDialogSim" value="Sim" type="button"
+                                        <p:commandButton id="btnDialogSimFecharBanca" value="Sim" type="button"
                                                          styleClass="ui-confirmdialog-yes"
                                                          icon="ui icon-check"/>
-                                        <p:commandButton id="btnDialogNao" value="Não" type="button"
+                                        <p:commandButton id="btnDialogNaoFecharBanca" value="Não" type="button"
+                                                         styleClass="ui-confirmdialog-no"
+                                                         icon="ui icon-close"/>
+                                    </p:confirmDialog>
+
+                                    <p:commandButton id="btnExcluirTcc"
+                                                     title="Excluir TCC" icon="ui-icon-trash"
+                                                     update="dtListaTccs messages">
+                                        <p:confirm header="Deseja excluir este TCC?"/>
+                                    </p:commandButton>
+
+                                    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                                        <p:commandButton id="btnDialogSimExcluir" value="Sim" type="button"
+                                                         styleClass="ui-confirmdialog-yes"
+                                                         icon="ui icon-check"/>
+                                        <p:commandButton id="btnDialogNaoExcluir" value="Não" type="button"
                                                          styleClass="ui-confirmdialog-no"
                                                          icon="ui icon-close"/>
                                     </p:confirmDialog>
