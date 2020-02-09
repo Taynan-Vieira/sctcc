@@ -1,4 +1,4 @@
-package br.com.sctcc.model;
+package br.com.sctcc.avaliation.model;
 
 import lombok.Data;
 

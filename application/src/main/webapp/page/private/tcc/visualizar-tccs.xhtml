@@ -21,7 +21,7 @@
                                  columnClasses="ui-grid-col-12" layout="grid"
                                  styleClass="ui-panelgrid-blank form-group"
                                  style="border:0px none; background-color:transparent;">
-                        <p:dataTable id="dtListaMateriaisCadastrados"
+                        <p:dataTable id="dtVisualizarTccs" value="#{visualizarTccBean.trabalhoProfessores}"
                                      var="tcc"
                                      emptyMessage="Sem TCCs."
                                      paginator="true"
@@ -29,19 +29,19 @@
                                      style="text-align: center;width: 100%;">
 
                             <p:column headerText="Nome do Aluno">
-                                <h:outputText/>
+                                <h:outputText value="#{tcc.trabalho.aluno.nome}"/>
                             </p:column>
 
                             <p:column headerText="Tema">
-                                <h:outputText/>
+                                <h:outputText value="#{tcc.trabalho.tema}"/>
                             </p:column>
 
                             <p:column headerText="Orientador">
-                                <h:outputText/>
+                                <h:outputText value="#{tcc.professor.nome}"/>
                             </p:column>
 
                             <p:column headerText="Status">
-                                <h:outputText/>
+                                <h:outputText value="#{tcc.trabalho.status}"/>
                             </p:column>
 
                             <p:column headerText="Opções">

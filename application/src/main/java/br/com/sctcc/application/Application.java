@@ -10,6 +10,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.servlet.DispatcherType;
 import java.util.EnumSet;
@@ -17,6 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @EntityScan(basePackages = "br.com.sctcc")
+@EnableJpaRepositories(basePackages = "br.com.sctcc.avaliation.repository")
 @SpringBootApplication(scanBasePackages = "br.com.sctcc")
 public class Application extends SpringBootServletInitializer {
 
