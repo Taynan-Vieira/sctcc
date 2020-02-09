@@ -18,7 +18,7 @@ public class Avaliacao implements Serializable {
 	private Long id;
 
 	@Column(name = "tcc06_nota_final")
-	private BigDecimal notaFinal;
+	private Double notaFinal;
 
 	@Column(name = "tcc06_banca_aberta")
 	private Boolean bancaAberta;

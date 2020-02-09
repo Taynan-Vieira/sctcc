@@ -28,7 +28,4 @@ public class Professor implements Serializable {
 	@Column(name = "tcc05_senha")
 	private String senha;
 
-	@Column(name = "tcc05_examinador")
-	private Boolean examinador;
-
 }

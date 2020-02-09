@@ -17,13 +17,14 @@ public class TrabalhoProfessor implements Serializable {
 	private Long id;
 
 	@Column(name = "tcc04_examinador")
-	private Long examinador;
+	private String examinador;
 
 	@ManyToOne
 	@JoinColumn(name = "fktcc04tcc03_cod_trabalho")
 	private Trabalho trabalho;
 
-	@Column(name = "fktcc04tcc05_cod_professor")
+	@ManyToOne
+	@JoinColumn(name = "fktcc04tcc05_cod_professor")
 	private Professor professor;
 
 }

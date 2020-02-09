@@ -21,7 +21,7 @@
                                  columnClasses="ui-grid-col-12" layout="grid"
                                  styleClass="ui-panelgrid-blank form-group"
                                  style="border:0px none; background-color:transparent;">
-                        <p:dataTable id="dtVisualizarTccs" value="#{visualizarTccBean.trabalhoProfessores}"
+                        <p:dataTable id="dtListaTccs" value="#{visualizarTccBean.trabalhos}"
                                      var="tcc"
                                      emptyMessage="Sem TCCs."
                                      paginator="true"
@@ -29,19 +29,15 @@
                                      style="text-align: center;width: 100%;">
 
                             <p:column headerText="Nome do Aluno">
-                                <h:outputText value="#{tcc.trabalho.aluno.nome}"/>
+                                <h:outputText value="#{tcc.aluno.nome}"/>
                             </p:column>
 
                             <p:column headerText="Tema">
-                                <h:outputText value="#{tcc.trabalho.tema}"/>
-                            </p:column>
-
-                            <p:column headerText="Orientador">
-                                <h:outputText value="#{tcc.professor.nome}"/>
+                                <h:outputText value="#{tcc.tema}"/>
                             </p:column>
 
                             <p:column headerText="Status">
-                                <h:outputText value="#{tcc.trabalho.status}"/>
+                                <h:outputText value="#{tcc.status}"/>
                             </p:column>
 
                             <p:column headerText="Opções">
@@ -52,7 +48,7 @@
 
                                     <p:commandButton id="btnFecharBanca"
                                                      title="Fechar banca" icon="ui-icon-trash"
-                                                     update="dtListaMateriaisCadastrados messages">
+                                                     update="dtListaTccs messages">
                                         <p:confirm header="Deseja excluir este material?"/>
                                     </p:commandButton>
                                     <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">

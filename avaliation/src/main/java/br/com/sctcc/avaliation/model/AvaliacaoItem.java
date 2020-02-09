@@ -21,7 +21,7 @@ public class AvaliacaoItem implements Serializable {
 	private String comentario;
 
 	@Column(name = "tcc07_nota")
-	private BigDecimal nota;
+	private Double nota;
 
 	@ManyToOne
 	@JoinColumn(name = "fktcc07tcc06_cod_avaliacao")

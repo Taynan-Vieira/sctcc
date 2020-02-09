@@ -1,7 +1,7 @@
 create table if not exists public.tcc04_trabalho_professor
 (
     tcc04_cod_trabalho_professor bigint not null,
-    tcc04_examinador bigint,
+    tcc04_examinador varchar(255),
     fktcc04tcc03_cod_trabalho bigint not null,
     fktcc04tcc05_cod_professor bigint not null,
 

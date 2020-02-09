@@ -21,17 +21,19 @@ public class VisualizarTccBean implements Serializable {
     private static final long serialVersionUID = 1088899847719383016L;
 
     @Autowired
-    private transient TrabalhoProfessorRepository trabalhoProfessorRepository;
+    private transient TrabalhoRepository trabalhoRepository;
 
-    private TrabalhoProfessor trabalhoProfessor;
+    private Trabalho trabalho;
 
-    private List<TrabalhoProfessor> trabalhoProfessores;
+    private List<Trabalho> trabalhos;
 
     @PostConstruct
-    public void init(){
+    public void init() {
 
-        trabalhoProfessor = new TrabalhoProfessor();
-        trabalhoProfessores = trabalhoProfessorRepository.findAll();
+        trabalho = new Trabalho();
+
+        trabalhos = trabalhoRepository.findAll();
+
     }
 
 }
