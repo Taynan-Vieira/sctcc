@@ -43,7 +43,10 @@
                             <p:column headerText="Opções">
                                 <p:column>
                                     <p:commandButton id="btnAvaliar"
-                                                     title="Avaliar TCC" icon="ui-icon-gavel">
+                                                     title="Avaliar TCC" icon="ui-icon-gavel"
+                                                     action="#{visualizarTccBean.redirecionarParaAvaliacaoTcc}">
+                                        <f:setPropertyActionListener value="#{tcc.id}"
+                                                                     target="#{visualizarTccBean.trabalhoId}"/>
                                     </p:commandButton>
 
                                     <p:commandButton id="btnFecharBanca"
