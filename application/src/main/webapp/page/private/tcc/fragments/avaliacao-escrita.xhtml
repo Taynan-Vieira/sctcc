@@ -16,7 +16,7 @@
                                  style="width: 100%" required="false">
                     <f:selectItem noSelectionOption="true"/>
                     <f:selectItem itemLabel="" itemValue=""/>
-                    <f:selectItems/>
+                    <f:selectItems value="#{avaliarTccBean.notasConteudo}"/>
                 </p:selectOneMenu>
                 <p:outputLabel value="Conteúdo" for="somConteudo"/>
             </h:panelGroup>
@@ -31,7 +31,7 @@
                                  style="width: 100%" required="false">
                     <f:selectItem noSelectionOption="true"/>
                     <f:selectItem itemLabel="" itemValue=""/>
-                    <f:selectItems/>
+                    <f:selectItems value="#{avaliarTccBean.notasRedacao}"/>
                 </p:selectOneMenu>
                 <p:outputLabel value="Redação" for="somRedacao"/>
             </h:panelGroup>
@@ -46,7 +46,7 @@
                                  style="width: 100%" required="false">
                     <f:selectItem noSelectionOption="true"/>
                     <f:selectItem itemLabel="" itemValue=""/>
-                    <f:selectItems/>
+                    <f:selectItems value="#{avaliarTccBean.notasNormalizacao}"/>
                 </p:selectOneMenu>
                 <p:outputLabel value="Normalização" for="somNormalizacao"/>
             </h:panelGroup>

@@ -16,7 +16,7 @@
                                  style="width: 100%" required="false">
                     <f:selectItem noSelectionOption="true"/>
                     <f:selectItem itemLabel="" itemValue=""/>
-                    <f:selectItems/>
+                    <f:selectItems value="#{avaliarTccBean.notasCapacitacaoExposicao}"/>
                 </p:selectOneMenu>
                 <p:outputLabel value="Capacidade de exposição" for="somExposicao"/>
             </h:panelGroup>
@@ -31,7 +31,7 @@
                                  style="width: 100%" required="false">
                     <f:selectItem noSelectionOption="true"/>
                     <f:selectItem itemLabel="" itemValue=""/>
-                    <f:selectItems/>
+                    <f:selectItems value="#{avaliarTccBean.notasRespostasArguicoes}"/>
                 </p:selectOneMenu>
                 <p:outputLabel value="Resposta as arguições" for="somArguicoes"/>
             </h:panelGroup>
@@ -46,7 +46,7 @@
                                  style="width: 100%" required="false">
                     <f:selectItem noSelectionOption="true"/>
                     <f:selectItem itemLabel="" itemValue=""/>
-                    <f:selectItems/>
+                    <f:selectItems value="#{avaliarTccBean.notasPrevisaoDeTempo}"/>
                 </p:selectOneMenu>
                 <p:outputLabel value="Previsão de tempo" for="somNormalizacao"/>
             </h:panelGroup>
